@@ -7,23 +7,35 @@ function trip(trips){
 	let destination = document.createElement("p");
 	let seats = document.createElement("p");
 
-    let nameN = document.createTextNode(trips[i].name);
-    let timeN = document.createTextNode(trips[i].time);
-    let originN = document.createTextNode(trips[i].origin);
-    let destinationN = document.createTextNode(trips[i].destination);
-    let seatsN = document.createTextNode(trips[i].seats.count());
+  let nameN = document.createTextNode(trips[i].name);
+  let timeN = document.createTextNode(trips[i].time);
+  let originN = document.createTextNode(trips[i].origin);
+  let destinationN = document.createTextNode(trips[i].destination);
+  let seatsN = document.createTextNode(trips[i].seats.count());
 
-    name.appendChild(nameN);
-    time.appendChild(timeN);
-    origin.appendChild(originN);
-    destination.appendChild(destinationN);
-    seats.appendChild(seatsN);
+  name.appendChild(nameN);
+  time.appendChild(timeN);
+  origin.appendChild(originN);
+  destination.appendChild(destinationN);
+  seats.appendChild(seatsN);
 
-    let element = document.getElementById("trip");
+  let element = document.getElementById("trip");
 
-    element.appendChild(name);
-    element.appendChild(time);
-    element.appendChild(origin);
-    element.appendChild(destination);
-    element.appendChild(seats);
+  element.appendChild(name);
+  element.appendChild(time);
+  element.appendChild(origin);
+  element.appendChild(destination);
+  element.appendChild(seats);
+}
+
+function CancelTrip(){
+	
+}
+
+function SignIn(){
+	location.href("home.html");
+}
+
+function SignUp(){
+	location.href("SignIn.html");
 }
