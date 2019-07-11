@@ -1,3 +1,7 @@
+function CancelTrip(){
+	
+}
+
 function SignIn(){
 	location.href("home.html");
 }
@@ -5,4 +9,5 @@ function SignIn(){
 function SignUp(){
 	location.href("SignIn.html");
 }
+
 
