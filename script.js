@@ -1,3 +1,4 @@
+function dltBooking(){
 
 function userBookings(users){
 	document.getElementById("bookings").innerHTML=" ";
@@ -8,11 +9,11 @@ function userBookings(users){
   			let dlt = document.createTextNode("Delete");
   			btn.appendChild(dlt);
     		let para = document.createElement("div");
-      		let node = document.createTextNode(bookings[i].name);
-      		para.appendChild(node);
-      		let element = document.getElementById("yourBookings");
-      		element.appendChild(para);
-      		element.appendChild(btn);
+        let node = document.createTextNode(bookings[i].name);
+        para.appendChild(node);
+        let element = document.getElementById("yourBookings");
+        element.appendChild(para);
+        element.appendChild(btn);
   		}
 
 function trips(){
@@ -29,12 +30,12 @@ function trips(){
       btn2.appendChild(dtls);
 
       let para = document.createElement("div");
-        let node = document.createTextNode(trips[i].name);
-        para.appendChild(node);
-        let element = document.getElementById("trips");
-        element.appendChild(para);
-        element.appendChild(btn1);
-        element.appendChild(btn2);
+      let node = document.createTextNode(trips[i].name);
+      para.appendChild(node);
+      let element = document.getElementById("trips");
+      element.appendChild(para);
+      element.appendChild(btn1);
+      element.appendChild(btn2);
     }
 }
 
@@ -45,10 +46,10 @@ function bookings(){
   		let dlt = document.createTextNode("Delete");
   		btn.appendChild(dlt);
     	let para = document.createElement("div");
-      	let node = document.createTextNode(bookings[i].name);
-      	para.appendChild(node);
-      	let element = document.getElementById("bookings");
-      	element.appendChild(para);
-      	element.appendChild(btn);
+      let node = document.createTextNode(bookings[i].name);
+      para.appendChild(node);
+      let element = document.getElementById("bookings");
+      element.appendChild(para);
+      element.appendChild(btn);
     }
 }
