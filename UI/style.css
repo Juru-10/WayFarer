@@ -98,7 +98,7 @@ ul>li>a:hover{
 	font-size: 48px;
 }
 
-#app a{
+#app>a{
 	color: #ffc30f;
 	text-decoration: none;
 }
