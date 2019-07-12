@@ -26,7 +26,7 @@ input{
 .btn:hover{
 	background: #ff5733;
 	font-size: 24px;
-	color: #c70039;
+	color: #ffc30f;
 }
 
 h2{
@@ -54,6 +54,17 @@ label{
 #footer{
 	height: 150px;
 	bottom: 0;
+}
+
+*{box-sizing: border-box;}
+
+.mySlides{display: none;}
+img {vertical-align: middle;}
+
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 .vh,.center{
@@ -85,6 +96,11 @@ ul>li>a:hover{
 	float:left;
 	margin: 10px;
 	font-size: 48px;
+}
+
+#app a{
+	color: #ffc30f;
+	text-decoration: none;
 }
 
 @media only screen and (max-width: 620px) {
