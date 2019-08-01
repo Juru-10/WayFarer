@@ -10,17 +10,22 @@ input{
 
 .center{
 	margin: 20px 33%;
-	background: rgba(0,0,0,0.6);
+	background: #ffc30f;
 	padding: 30px;
 	border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	color: #581845;
+}
+
+form{
+	font-size: 20px;
 }
 
 .btn{
-	background: #ffc30f;
-	font-size: 20px;
-	color: #c70039;
+	background: #581845;
+	font-size: 24px;
+	color: #ffc30f;
 }
 
 .btn:hover{
@@ -45,17 +50,53 @@ label{
 #navbar, #footer{
 	width:100%;
 	height:80px;
-	border: 1px solid darkred;
-	background: #c70039;
+	/* border: 10px solid darkred; */
+	background: #581845;
 	color: #ffc30f;
+	font-weight: 900;
+	/* box-sizing: border-box; */
+}
+
+body{
+	box-sizing: border-box;
+}
+
+#home{
+	background: rgba(250, 200, 0, 0.6);
+	padding: 20px;
+	text-align: center;
+	width:30%;
+	margin: 0 35%;
+	font-size: 20px;
+	color: #581845;
 	font-weight: 900;
 }
 
 #footer{
-	height: 150px;
+	height: 100px;
 	bottom: 0;
+	color: #ffc30f;
+	padding: 35px 0;
+	text-align: center;
+	font-size: 20px;
 }
 
+#homeIcon{
+	height: 30px;
+	width: 50px;
+}
+
+#homeIcon:hover{
+	background: white;
+}
+
+#searchInput{
+	width: 30%;
+	margin: 20px 0;
+	font-size: 18px;
+}
+
+<<<<<<< HEAD
 *{box-sizing: border-box;}
 
 .mySlides{display: none;}
@@ -69,7 +110,14 @@ img {vertical-align: middle;}
 
 .vh,.center{
 	min-height: 60vh; 
+=======
+#searchIcon{
+	width: 30px;
+	margin: 20px 0 -10px -40px;
+>>>>>>> develop
 }
+
+.vh,.center{ min-height: 70vh; }
 
 ul{
 	display: flex;
@@ -82,22 +130,32 @@ ul>li{
 }
 
 ul>li>a{
-	color: #581845;
+	color: #ffc30f;
 	text-decoration: none;
 	font-size: 24px;
 }
 
 ul>li>a:hover{
-	color: #ffc30f;
-
+	color: white;
 }
 
 #app{
 	float:left;
 	margin: 10px;
 	font-size: 48px;
+	width: 25%;
 }
 
+#bhome{
+	background-image: url("./Images/pexels-photo-2533092.jpeg");
+	width: 100%;
+	height: 70vh;
+	margin: 0;
+	background-size: contain;
+	background-repeat: repeat;
+}
+
+<<<<<<< HEAD
 #app>a{
 	color: #ffc30f;
 	text-decoration: none;
@@ -107,14 +165,33 @@ ul>li>a:hover{
 	.center{
 		width:80%;margin:10%;
 	}
+=======
+@media only screen and (min-width: 990px) and (max-width: 1400px) {
+	.center{ width:30%;margin: 30px 35%; }
+	#searchInput{ width: 32%; }
+	#app{ width: 21%; }
+	ul>li{ margin-right:10px; }
+}
+>>>>>>> develop
 
-	ul>li{
-		display: inline-block;
-		margin-right:30px;margin-top: 0; 
-		margin-bottom: 30px;
-	}
+@media only screen and (min-width: 1200px) {
+	.center{ width: 30%; margin: 30px 35%; }
+	#searchInput{ width: 29%; }
+	#app{ width: 24%; }
+	ul>li{ margin-right:30px; }
+}
 
-	#navbar{
-		height:150px;
-	}
+@media only screen and (max-width: 640px) {
+	.center{ width:80%;margin:10%; }
+	#searchInput{ width: 80%; }
+	#app{ width: 50%; }
+	ul>li{ margin-right:10px; }
+	#navbar{ height:250px; }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1020px) {
+	.center{ width:50%;margin: 30px 25%; }
+	#searchInput{ width: 55%; }
+	#app{ width: 35%; }
+	#navbar{ height:180px; }
 }
