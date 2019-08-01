@@ -96,25 +96,9 @@ body{
 	font-size: 18px;
 }
 
-<<<<<<< HEAD
-*{box-sizing: border-box;}
-
-.mySlides{display: none;}
-img {vertical-align: middle;}
-
-.slideshow {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.vh,.center{
-	min-height: 60vh; 
-=======
 #searchIcon{
 	width: 30px;
 	margin: 20px 0 -10px -40px;
->>>>>>> develop
 }
 
 .vh,.center{ min-height: 70vh; }
@@ -155,24 +139,12 @@ ul>li>a:hover{
 	background-repeat: repeat;
 }
 
-<<<<<<< HEAD
-#app>a{
-	color: #ffc30f;
-	text-decoration: none;
-}
-
-@media only screen and (max-width: 620px) {
-	.center{
-		width:80%;margin:10%;
-	}
-=======
 @media only screen and (min-width: 990px) and (max-width: 1400px) {
 	.center{ width:30%;margin: 30px 35%; }
 	#searchInput{ width: 32%; }
 	#app{ width: 21%; }
 	ul>li{ margin-right:10px; }
 }
->>>>>>> develop
 
 @media only screen and (min-width: 1200px) {
 	.center{ width: 30%; margin: 30px 35%; }
