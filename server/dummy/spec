@@ -1,0 +1,209 @@
+API Endpoint Specification
+Endpoint: POST /auth/signup
+Create user account
+Request spec: (body)
+{
+“email”: Integer,
+“password”: String,
+“first_name”: String,
+“last_name”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“token” : String,
+“first_name”: String,
+“last_name”: String,
+“email”: String,
+...
+}
+}
+Endpoint: POST /auth/signin
+Login a user
+Request spec: (body)
+{
+“email”: Integer,
+“password”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+© Andela Confidential
+“token” : String,
+“first_name”: String,
+“last_name”: String,
+“email”: String,
+...
+}
+}
+Endpoint: POST /trips
+Create a trip.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec: (body)
+{
+“status” : “success”,
+“data” : {
+“trip_id” : Integer,
+“seating_capacity” : Integer,
+“origin” : String,
+”destination”: String,
+“trip_date” : Date,
+“fare” : Float,
+...
+}
+}
+Endpoint: GET /trips/<:trip-id>
+Get a specific trip.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec: (body)
+{
+“status”:“success”,
+“data”:{
+    “trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String
+
+”destiatio”:String,
+“trip_date”:Date,
+“fare”:loat,
+...
+}
+}
+Endpoint: GET/trips
+Getall trips. 
+Request spec: (header) { 
+    “token”: String, 
+    ... }
+Response spec: (body) { 
+    “status” : “success”,
+“data”:
+[{
+    “trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String,
+”destination”:String,
+“trip_date”:Date,
+“fare”:Float,
+...
+},
+{
+“trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String,
+”destination”:String,
+“trip_date”:Date,
+“fare”:Float,
+...
+},
+{
+    “trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String,
+”destination”: String,
+“trip_date” : Date,
+“fare” : Float,
+...
+}
+]
+}
+Endpoint: PATCH /trips/<:trip-id>/
+”destination”: String,
+“trip_date” : Date,
+“fare” : Float,
+...
+}
+]
+}
+Endpoint: PATCH /trips/<:trip-id>/cancel
+Cancel a trip.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“message” : “Trip cancelled successfully”,
+...
+}
+}
+Endpoint: POST /bookings
+Book a seat on a trip
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“booking_id” : Integer,
+“bus_license_number” : String,
+© Andela Confidential
+“trip_date”: Date,
+“first_name”: String,
+“last_name”: String,
+“user_email”: String,
+...
+}
+}
+Endpoint: GET /bookings
+View all bookings. An Admin can see all bookings, while user can see all of his/her
+bookings.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : [
+{
+“booking_id” : Integer,
+“bus_license_number” : String,
+“trip_date”: Date,
+“first_name”: String,
+“last_name”: String,
+“user_email”: String,
+...
+}, {
+“booking_id” : Integer,
+“bus_license_number” : String,
+“trip_date”: Date,
+“first_name”: String,
+“last_name”: String,
+“user_email”: String,
+...
+}
+]
+}
+© Andela Confidential
+Endpoint: DELETE /bookings/<:booking-id>
+Delete a booking.
+Request spec: (body)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“message” : “Booking deleted successfully,
+...
