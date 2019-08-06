@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trips</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<title>AdminDashboard</title>
+	<link rel="stylesheet" type="text/css" href="..
+	/style.css">
 	<script type="text/javascript" src="../script.js"></script>
 </head>
 <body>
-	<div id="navbar">		<h1 id="app">WayFarer</h1>
+	<div id="navbar">
+		<h1 id="app">WayFarer</h1>
 		<span>
 			<input id="searchInput" type="text" name="search" placeholder="Search by Origin or Destination">
 			<img type="button" id="searchIcon" src="../Images/search-symbol.png">
@@ -18,20 +20,24 @@
 			<li><a href="SignIn.html">SignIn</a></li>
 		</ul>
 	</div>
-	<div class="vh">
-		<h2>Trip Details</h2>
-		<div id="trip">
-			<img src="../Images/paysage.jpg" alt="">
-			<div id="details">
-				<p><span>Origin:</span> <strong>Kigali</strong></p> 
-				<p><span>Destination:</span> <strong>Rusizi</strong></p>
-				<p><span>Date:</span> <strong>20th August 2019</strong></p>
-			</div>
-		</div>
+	<h1 id="AdminDashboard">Admin Dashboard</h1>
+	<div class="vh dashboard">
+		<a href="users.html"><div id="usersbox">
+			<h2>Users</h2>
+			
+		</div></a>
+		<a href="trips.html"><div id="tripsbox">
+			<h2>Trips</h2>
+			
+		</div></a>
+		<a href="yourBookings.html"><div id="bookingsbox">
+			<h2>Bookings</h2>
+			
+		</div></a>
 	</div>
 	<div id="footer">
-		<p>&copy;2019 WayFarer</p>
-	    <p>All rights reserved.</p>
+	  <p>&copy;2019 WayFarer</p>
+	  <p>All rights reserved.</p>	
 	</div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+1.Endpoint: POST /auth/signup
+Create user account
+Request spec: (body)
+{
+“email”: Integer,
+“password”: String,
+“first_name”: String,
+“last_name”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“token” : String,
+“first_name”: String,
+“last_name”: String,
+“email”: String,
+...
+}
+}
+
+2.Endpoint: POST /auth/signin
+Login a user
+Request spec: (body)
+{
+“email”: Integer,
+“password”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“token” : String,
+“first_name”: String,
+“last_name”: String,
+“email”: String,
+...
+}
+}
