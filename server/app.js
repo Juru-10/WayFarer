@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import bodyParser from 'body-parser';
 
 import bookingRouter from './routes/bookingRouter';
+import tripRouter from './routes/tripRouter';
 
 const app = express();
 
