@@ -39,21 +39,27 @@ input{
 .dashboard{text-align: center;margin: 0 10vw;}
 #usersbox,#tripsbox,#bookingsbox{margin: 2vw;padding-top: 30px}
 #AdminDashboard{
-	background:yellow;
+	background:#ffc30f;
 	color:rgb(53, 2, 53);
 	width:100%;margin-top:0;
 	text-align: center;
 	padding: 10px;
 }
 .dashboard div{
-	width: 20vw;
+	width: 22vw;
 	height: 20vw;
-	border: 5px solid yellow;
+	border: 5px solid #ffc30f;
 	border-radius: 10px;
 	float: left;
 }
 #bookings{text-align: center;margin: 0 20%;}
-#bookings div{float: left;margin: 30px;}
+#bookings div{
+	float: left;
+	margin: 30px;
+	/* background: #ffc30f; */
+	box-shadow: 3px 3px 5px 6px #ffc30f;
+	padding: 20px;
+}
 #users{margin: 50px 20%;font-size: 20px;}
 #users>strong{margin: 10px;}
 form{
