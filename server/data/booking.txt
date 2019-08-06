@@ -1,0 +1,66 @@
+1.Endpoint: POST /bookings
+Book a seat on a trip
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“booking_id” : Integer,
+“bus_license_number” : String,
+“trip_date”: Date,
+“first_name”: String,
+“last_name”: String,
+“user_email”: String,
+...
+}
+}
+
+2.Endpoint: GET /bookings
+View all bookings. An Admin can see all bookings, while user can see all of his/her
+bookings.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : [
+{
+“booking_id” : Integer,
+“bus_license_number” : String,
+“trip_date”: Date,
+“first_name”: String,
+“last_name”: String,
+“user_email”: String,
+...
+}, {
+“booking_id” : Integer,
+“bus_license_number” : String,
+“trip_date”: Date,
+“first_name”: String,
+“last_name”: String,
+“user_email”: String,
+...
+}
+]
+}
+
+3.Endpoint: DELETE /bookings/<:booking-id>
+Delete a booking.
+Request spec: (body)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“message” : “Booking deleted successfully,
+...
