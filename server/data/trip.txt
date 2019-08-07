@@ -1,0 +1,105 @@
+1.Endpoint: POST /trips
+Create a trip.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec: (body)
+{
+“status” : “success”,
+“data” : {
+“trip_id” : Integer,
+“seating_capacity” : Integer,
+“origin” : String,
+”destination”: String,
+“trip_date” : Date,
+“fare” : Float,
+...
+}
+}
+
+2.Endpoint: GET /trips/<:trip-id>
+Get a specific trip.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec: (body)
+{
+“status”:“success”,
+“data”:{
+    “trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String
+
+”destiatio”:String,
+“trip_date”:Date,
+“fare”:loat,
+...
+}
+}
+
+3.Endpoint: GET/trips
+Getall trips. 
+Request spec: (header) { 
+    “token”: String, 
+    ... }
+Response spec: (body) { 
+    “status” : “success”,
+“data”:
+[{
+    “trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String,
+”destination”:String,
+“trip_date”:Date,
+“fare”:Float,
+...
+},
+{
+“trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String,
+”destination”:String,
+“trip_date”:Date,
+“fare”:Float,
+...
+},
+{
+    “trip_id”:Integer,
+“seating_capacity”:Integer,
+“origin”:String,
+”destination”: String,
+“trip_date” : Date,
+“fare” : Float,
+...
+}
+]
+}
+
+4.Endpoint: PATCH /trips/<:trip-id>/
+”destination”: String,
+“trip_date” : Date,
+“fare” : Float,
+...
+}
+]
+}
+
+5.Endpoint: PATCH /trips/<:trip-id>/cancel
+Cancel a trip.
+Request spec: (header)
+{
+“token”: String,
+...
+}
+Response spec:
+{
+“status” : “success”,
+“data” : {
+“message” : “Trip cancelled successfully”,
+...
+}
+}
