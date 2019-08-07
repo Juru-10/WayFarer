@@ -1,4 +1,9 @@
-create(data) {
+import moment from 'moment';
+import uuid from 'uuid';
+
+const Trip = {
+  
+  create(data) {
   const newTrip = {
     status: data.success || 'success',
     data: {
@@ -16,3 +21,10 @@ create(data) {
   this.trips.push(newTrip);
   return newTrip;
 },
+
+  findAll() {
+    return this.trips;
+  },
+
+}
+export default Trip;

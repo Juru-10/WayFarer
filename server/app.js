@@ -14,5 +14,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/api/v1', bookingRouter);
+app.use('/api/v1', tripRouter);
 
 export default app;
