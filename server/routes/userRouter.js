@@ -8,24 +8,24 @@ const router = Router();
 
 router.post(
   '/auth/signup',
-  celebrate({
-    body: validator.postUser
-  }),
+  // celebrate({
+  //   body: validator.postUser,
+  // }),
   controller.postUser
 );
 
-// router.post(
-//   '/auth/signin',
-//   celebrate({
-//     body: validator.checkUser
-//   }),
-//   controller.checkUser
-// );
+router.post(
+  '/auth/signin',
+  // celebrate({
+  //   body: validator.checkUser,
+  // }),
+  controller.checkUser
+);
 
 router.get('/users', controller.getUsers);
 
 router.get(
-  '/users/:id',
+  '/users/id',
   celebrate({
     params: validator.getUser
   }),
@@ -33,7 +33,7 @@ router.get(
 );
 
 router.delete(
-  '/users/:id',
+  '/users/id',
   celebrate({
     params: validator.getUser
   }),
@@ -41,11 +41,11 @@ router.delete(
 );
 
 router.put(
-  '/users/:id',
-  celebrate({
-    params: validator.getUser,
-    body: validator.putUser
-  }),
+  '/users/id',
+  // celebrate({
+  //   params: validator.getUser,
+  //   body: validator.putUser
+  // }),
   controller.updateUser
 );
 
