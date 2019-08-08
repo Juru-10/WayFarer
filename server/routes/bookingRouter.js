@@ -7,7 +7,7 @@ import bookingController from '../controllers/bookingController';
 const bookingRouter = Router();
 
 bookingRouter.post(
-  '/bookings/',
+  '/bookings',
   // celebrate({
   //   body: validator.postTrip
   // }),
@@ -24,13 +24,13 @@ bookingRouter.get(
   bookingController.getBooking
 );
 
-// bookingRouter.delete(
-//   '/trips/:id',
+bookingRouter.delete(
+  '/trips/:id',
   // celebrate({
   //   params: validator.getTrip
   // }),
-//   bookingController.deleteBooking
-// );
+  bookingController.deleteBooking
+);
 
 // tripRouter.put(
 //   '/trips/:id',
