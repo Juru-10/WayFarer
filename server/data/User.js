@@ -1,34 +1,72 @@
 import moment from 'moment';
-import uuid from 'uuid';
+
+// import uuid from 'uuid';
+// import jwt from 'jsonwebtoken';
+// import bcrypt from 'bcrypt';
+const users = [{
+  id: 1,
+  first_name: 'jura',
+  last_name: 'yuui',
+  email: 'rujru@gmh.kj',
+  password:'kjhklkjh', 
+  is_admin: false,
+  createdDate: moment(moment.now()).format('DD-MM-YYYY'),}];
 
 const User = {
+  
   constructor() {
-    this.users = [];
+    // this.users = [];
   },
   create(data) {
+    // this.users = [];
     const newUser = {
-      id: uuid.v4(),
-      success: data.success || 'success',
+      // 
+      message: data.success || 'You have signed up successfully',
       data: {
+        id: users.length+1,
+        token: data.token,
         email: data.email || '',
         password: data.password || '',
         first_name: data.first_name || '',
         last_name: data.last_name || '',
-        createdDate: moment.now(),
-        modifiedDate: moment.now()
+        is_admin: false,
+        createdDate: moment(moment.now()).format('DD-MM-YYYY')
       }
     };
-    this.users = [];
-    this.users.push(newUser);
-    return newUser;
+
+    // bcrypt.hash('password',10,(err, hash) =>{});
+    // bcrypt.compare('comparePassword', hash, (err, res) =>{
+    //   if(res)  {
+
+    //   } else {
+
+    //   } 
+    // });
+    
+    // if (this.users.find(user => user.email === email)){
+    //   message = 'User already exists'
+    // }else{
+      
+      users.push(newUser.data);
+      return newUser;
+    // }
   },
-  signin(email,password) {
-    return users.find(user => user.email === email, user.password === password);
+  signin({email,password}) {
+    for(let i;i<=users.length; i++){
+      if(users[i].email==={email} && users[i].password==={password}){
+        return users[i];
+      }
+    }
   },
   findOne(id) {
-    return this.users.find(user => user.id === id);
+    for( let i;i<=users.length;i++){
+      if(users[i].id===id){
+        return users[i];
+      }
+    }
+
   },
-  findAll() {return this.users;},
+  findAll() {return users;},
   update(id, data) {
     const user = this.findOne(id);
     const index = this.users.indexOf(user);
