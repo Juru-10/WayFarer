@@ -1,6 +1,7 @@
 import { Joi } from 'celebrate';
 
 export const postTrip = Joi.object().keys({
+
   seating_capacity: Joi.string().required(),
   origin: Joi.string().required(),
   destination: Joi.string().required(),
@@ -11,8 +12,4 @@ export const postTrip = Joi.object().keys({
 
 export const getTrip = Joi.object().keys({
   trip_id: Joi.number().required()
-});
-
-export const patchTrip = Joi.object().keys({
-  trip_id: Joi.string().required()
 });
